@@ -8,14 +8,14 @@ st.title("Dashboard Bike Sharing - Full Analysis")
 
 @st.cache
 def load_data_day():
-    df_day = pd.read_csv('../data/day.csv')
+    df_day = pd.read_csv('data/day.csv')
     df_day['dteday'] = pd.to_datetime(df_day['dteday'])
     df_day['day_of_week'] = df_day['dteday'].dt.day_name()
     return df_day
 
 @st.cache
 def load_data_hour():
-    df_hour = pd.read_csv('../data/hour.csv')
+    df_hour = pd.read_csv('data/hour.csv')
     df_hour['dteday'] = pd.to_datetime(df_hour['dteday'])
     df_hour['hr'] = df_hour['hr'].astype(int)
 
